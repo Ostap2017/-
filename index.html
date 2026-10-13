@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Заряд телефону</title>
+<title>Заряд пристрою</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@ button.alt2{background:linear-gradient(135deg,#f97316,#ec4899);box-shadow:0 8px 
 <main class="card" id="card">
   <div class="clock" id="clock">--:--:--</div>
   <div class="date" id="date"></div>
-  <h1>Заряд телефону</h1>
+  <h1>Заряд пристрою</h1>
   <div class="battery"><div class="track"><div class="fill" id="fill"></div></div><div class="bolt">⚡</div></div>
   <div class="pct" id="pct">--%</div>
   <div class="chip"><span class="dot"></span><span id="status">Завантаження…</span></div>
@@ -140,7 +140,7 @@ button.alt2{background:linear-gradient(135deg,#f97316,#ec4899);box-shadow:0 8px 
   function init(){
     if(!navigator.getBattery){
       $('status').textContent='Недоступно';
-      $('note').textContent='Відкрий сторінку на телефоні Android у Chrome. На iPhone/Safari ця функція не працює.';
+      $('note').textContent='Відкрий сторінку на телефоні Android або ПК у Chrome. На iPhone/Safari ця функція не працює.';
       return;
     }
     navigator.getBattery().then(function(b){
